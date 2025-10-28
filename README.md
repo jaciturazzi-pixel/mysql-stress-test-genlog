@@ -398,4 +398,4 @@ Para problemas ou melhorias:
 1. Verifique os logs detalhados
 2. Teste com configurações mais conservadoras
 3. Monitore recursos do sistema
-4. Analise logs do MySQL para erros específicos
+4. Analise logs do MySQL para erros específicos# mysql-stress-test-genlog
