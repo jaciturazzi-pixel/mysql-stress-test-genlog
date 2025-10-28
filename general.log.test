@@ -1,0 +1,100 @@
+		173197872 Query	UPDATE user_game_profile_2471 SET  scratch_consecutives = -1, last_update_timestamp = NOW() WHERE user_game_profile_id = 3416890961
+		173194684 Query	SELECT hash, user_id, prize_id, timestamp FROM chameleon.scratchcard_transaction WHERE user_id = 4908983999
+		173196015 Change user	mobile_ssl@10.28.31.29 on  using SSL/TLS
+		173197569 Change user	mobile_ssl@10.28.25.13 on  using SSL/TLS
+		173196947 Change user	mobile_ssl@10.28.24.229 on  using SSL/TLS
+		173197268 Change user	mobile_ssl@10.28.27.55 on  using SSL/TLS
+		173197569 Change user	mobile_ssl@10.28.25.13 on chameleon using SSL/TLS
+		173196947 Change user	mobile_ssl@10.28.24.229 on chameleon using SSL/TLS
+		173196015 Change user	mobile_ssl@10.28.31.29 on chameleon using SSL/TLS
+		173197268 Change user	mobile_ssl@10.28.27.55 on chameleon using SSL/TLS
+		173195674 Change user	mobile_ssl@10.28.28.113 on  using SSL/TLS
+		173197268 Query	SELECT * FROM chameleon.scratchcard_transaction WHERE hash = 'd9cc07f2fe3d91edf369db5daa0e31e2b804342cbf3133ead3d9b68e642146a0'
+		173197569 Query	UPDATE user_game_profile_2471 SET  incentive_timestamp = FROM_UNIXTIME(1761523200), user_id = 4949891771, last_update_timestamp = NOW() WHERE user_game_profile_id = 3423987480
+		173196947 Query	UPDATE user_game_profile_2471 SET  balls_potted = 1489, current_win_streak = 0, seconds_played = 49927, games_lost = 110, games_played = 219, user_id = 4917748833, level_progression = IF(level_progression > 2637, level_progression, 2637), last_update_timestamp = NOW() WHERE user_game_profile_id = 3391848112
+		173196015 Query	UPDATE user_game_profile_2471 SET  daily_bonus_timestamp = FROM_UNIXTIME(1761663895), last_update_timestamp = NOW() WHERE user_game_profile_id = 3422581230
+		173195674 Change user	mobile_ssl@10.28.28.113 on chameleon using SSL/TLS
+		173198007 Change user	mobile_ssl@10.28.25.13 on  using SSL/TLS
+		173196386 Change user	mobile_ssl@10.28.26.188 on  using SSL/TLS
+		173195773 Change user	mobile_ssl@10.28.31.181 on  using SSL/TLS
+		173196386 Change user	mobile_ssl@10.28.26.188 on chameleon using SSL/TLS
+		173195674 Query	UPDATE user_game_profile_2471 SET  current_win_streak = 0, seconds_played = 472677, games_lost = 1114, games_played = 2380, user_id = 3483502828, last_update_timestamp = NOW() WHERE user_game_profile_id = 2471054654
+		173198007 Change user	mobile_ssl@10.28.25.13 on chameleon using SSL/TLS
+		173196386 Query	UPDATE user_game_profile_2471 SET  balls_potted = 567, total_winnings = 29000, current_win_streak = 1, seconds_played = 20381, games_won = 36, games_played = 83, user_id = 4886843516, level_progression = IF(level_progression > 2382, level_progression, 2382), last_update_timestamp = NOW() WHERE user_game_profile_id = 3360947721
+		173195773 Change user	mobile_ssl@10.28.31.181 on chameleon using SSL/TLS
+		173198007 Query	UPDATE user_game_profile_2471 SET  balls_potted = 10467, total_winnings = 1338450, seconds_played = 360219, games_lost = 728, games_won = 941, games_played = 1669, user_id = 4555475507, level_progression = IF(level_progression > 3016, level_progression, 3016), last_update_timestamp = NOW() WHERE user_game_profile_id = 3012565491
+		173195773 Query	UPDATE user_game_profile_2471 SET  daily_bonus_timestamp = FROM_UNIXTIME(1761665249), last_update_timestamp = NOW() WHERE user_game_profile_id = 3423987480
+		173197251 Change user	mobile_ssl@10.28.25.13 on  using SSL/TLS
+		173197251 Change user	mobile_ssl@10.28.25.13 on chameleon using SSL/TLS
+		173197251 Query	UPDATE user_game_profile_2471 SET  vip_migrated = 1, user_id = 4950005163, last_update_timestamp = NOW() WHERE user_game_profile_id = 3424100864
+		173197243 Change user	mobile_ssl@10.28.27.49 on  using SSL/TLS
+		173197243 Change user	mobile_ssl@10.28.27.49 on chameleon using SSL/TLS
+		173197243 Query	UPDATE user_game_profile_2471 SET  vip_level_progression = 159, balls_potted = 168, current_win_streak = 0, seconds_played = 4551, games_lost = 6, games_played = 20, user_id = 4948121779, level_progression = IF(9 > level, 167, IF(167 > level_progression and 9 = level, 167, level_progression)), level = IF(level > 9, level, 9), last_update_timestamp = NOW() WHERE user_game_profile_id = 3422217605
+		173197728 Change user	mobile_ssl@10.28.25.13 on  using SSL/TLS
+		173197728 Change user	mobile_ssl@10.28.25.13 on chameleon using SSL/TLS
+		173197728 Query	UPDATE user_game_profile_2471 SET  selected_cue = 16087, user_id = 4950005218, last_update_timestamp = NOW() WHERE user_game_profile_id = 3424100919
+		173195975 Change user	mobile_ssl@10.28.26.188 on  using SSL/TLS
+		173195975 Change user	mobile_ssl@10.28.26.188 on chameleon using SSL/TLS
+		173195975 Query	UPDATE user_game_profile_2471 SET  vip_level_progression = 174, balls_potted = 229, total_winnings = 4200, current_win_streak = 1, seconds_played = 6990, games_lost = 2, games_won = 11, games_played = 27, user_id = 4645936812, level_progression = IF(7 > level, 378, IF(378 > level_progression and 7 = level, 378, level_progression)), level = IF(level > 7, level, 7), last_update_timestamp = NOW() WHERE user_game_profile_id = 3118846375
+		173194838 Change user	mobile_ssl@10.28.29.206 on  using SSL/TLS
+		173195630 Change user	mobile_ssl@10.28.30.82 on  using SSL/TLS
+		173194838 Change user	mobile_ssl@10.28.29.206 on chameleon using SSL/TLS
+		173195630 Change user	mobile_ssl@10.28.30.82 on chameleon using SSL/TLS
+		173194838 Query	UPDATE user_game_profile_2471 SET  vip_level_progression = 75, selected_cue = 1022, balls_potted = 367, seconds_played = 10477, games_lost = 17, games_played = 47, user_id = 4943927458, level_progression = IF(15 > level, 171, IF(171 > level_progression and 15 = level, 171, level_progression)), level = IF(level > 15, level, 15), last_update_timestamp = NOW() WHERE user_game_profile_id = 3418023532
+		173195630 Query	SELECT hash, user_id, prize_id, timestamp FROM chameleon.scratchcard_transaction WHERE user_id = 1235665479
+		173197584 Change user	mobile_ssl@10.28.27.49 on  using SSL/TLS
+		173197584 Change user	mobile_ssl@10.28.27.49 on chameleon using SSL/TLS
+		173197584 Query	UPDATE user_game_profile_2471 SET  vip_migrated = 1, balls_potted = 3, user_id = 4950004102, last_update_timestamp = NOW() WHERE user_game_profile_id = 3424099804
+		173197848 Change user	mobile_ssl@10.28.24.229 on  using SSL/TLS
+		173197848 Change user	mobile_ssl@10.28.24.229 on chameleon using SSL/TLS
+		173197848 Query	UPDATE user_game_profile_2471 SET  balls_potted = 458, seconds_played = 16500, games_lost = 30, games_played = 59, user_id = 4883077448, level_progression = IF(level_progression > 803, level_progression, 803), last_update_timestamp = NOW() WHERE user_game_profile_id = 3357182295
+		173194972 Change user	mobile_ssl@10.28.27.55 on  using SSL/TLS
+		173194972 Change user	mobile_ssl@10.28.27.55 on chameleon using SSL/TLS
+		173194972 Query	UPDATE user_game_profile_2471 SET  daily_bonus_timestamp = FROM_UNIXTIME(1761663245), last_update_timestamp = NOW() WHERE user_game_profile_id = 1663983503
+		173196494 Change user	mobile_ssl@10.28.26.226 on  using SSL/TLS
+		173196494 Change user	mobile_ssl@10.28.26.226 on chameleon using SSL/TLS
+		173196494 Query	SELECT hash, user_id, prize_id, timestamp FROM chameleon.scratchcard_transaction WHERE user_id = 4939365270
+		173197155 Change user	mobile_ssl@10.28.24.229 on  using SSL/TLS
+		173198034 Change user	mobile_ssl@10.28.25.179 on  using SSL/TLS
+		173197155 Change user	mobile_ssl@10.28.24.229 on chameleon using SSL/TLS
+		173197155 Query	SELECT hash, user_id, prize_id, timestamp FROM chameleon.scratchcard_transaction WHERE user_id = 4173872140
+		173198034 Change user	mobile_ssl@10.28.25.179 on chameleon using SSL/TLS
+		173198034 Query	UPDATE user_game_profile_2471 SET  current_win_streak = 0, seconds_played = 2818006, games_lost = 8304, games_played = 16177, user_id = 3156540008, level_progression = IF(level_progression > 379368, level_progression, 379368), last_update_timestamp = NOW() WHERE user_game_profile_id = 2159011637
+		173194684 Query	INSERT INTO chameleon.scratchcard_transaction VALUES ('487b45774ba7df6b8e583bf8f032990e5a922f3295aee900b3faef0130d0cdb8', 4908983999, 79, '2025-10-27 14:51:44')
+		173195953 Change user	mobile_ssl@10.28.31.181 on  using SSL/TLS
+		173195953 Change user	mobile_ssl@10.28.31.181 on chameleon using SSL/TLS
+		173195953 Query	UPDATE user_game_profile_2471 SET  avatar_item_id = 32972, balls_potted = 3, user_id = 4937904818, last_update_timestamp = NOW() WHERE user_game_profile_id = 3412001326
+		173196429 Change user	mobile_ssl@10.28.30.79 on  using SSL/TLS
+		173197309 Change user	mobile_ssl@10.28.25.13 on  using SSL/TLS
+		173196505 Change user	mobile_ssl@10.28.24.229 on  using SSL/TLS
+		173195040 Change user	mobile_ssl@10.28.29.206 on  using SSL/TLS
+		173194980 Change user	mobile_ssl@10.28.30.79 on  using SSL/TLS
+		173197309 Change user	mobile_ssl@10.28.25.13 on chameleon using SSL/TLS
+		173194641 Change user	mobile_ssl@10.28.30.82 on  using SSL/TLS
+		173196429 Change user	mobile_ssl@10.28.30.79 on chameleon using SSL/TLS
+		173196713 Change user	mobile_ssl@10.28.24.229 on  using SSL/TLS
+		173196505 Change user	mobile_ssl@10.28.24.229 on chameleon using SSL/TLS
+		173197309 Query	UPDATE user_game_profile_2471 SET  balls_potted = 8891, total_winnings = 768200, seconds_played = 374569, games_lost = 621, games_won = 779, games_played = 1400, user_id = 4866489475, level_progression = IF(level_progression > 9490, level_progression, 9490), last_update_timestamp = NOW() WHERE user_game_profile_id = 3340596238
+		173196429 Query	UPDATE user_game_profile_2471 SET  balls_potted = 90660, current_win_streak = 0, seconds_played = 3228825, games_lost = 7709, games_played = 15370, user_id = 4746047875, level_progression = IF(level_progression > 400114, level_progression, 400114), last_update_timestamp = NOW() WHERE user_game_profile_id = 3221384425
+		173195040 Change user	mobile_ssl@10.28.29.206 on chameleon using SSL/TLS
+		173196505 Query	UPDATE user_game_profile_2471 SET  vip_level_progression = 36, balls_potted = 22, total_winnings = 400, current_win_streak = 3, seconds_played = 659, longest_win_streak_timestamp = 1761576704, longest_win_streak = 3, games_won = 3, games_played = 3, user_id = 4949999662, level_progression = IF(3 > level, 172, IF(172 > level_progression and 3 = level, 172, level_progression)), level = IF(level > 3, level, 3), last_update_timestamp = NOW() WHERE user_game_profile_id = 3424095364
+		173194980 Change user	mobile_ssl@10.28.30.79 on chameleon using SSL/TLS
+		173197872 Query	DELETE FROM chameleon.scratchcard_transaction WHERE hash = 'c880bc84b10d422a656e4b6101b55d0ea6c456747343693df9be44b208a60a97'
+		173194641 Change user	mobile_ssl@10.28.30.82 on chameleon using SSL/TLS
+		173195582 Change user	mobile_ssl@10.28.28.113 on  using SSL/TLS
+		173196713 Change user	mobile_ssl@10.28.24.229 on chameleon using SSL/TLS
+		173194980 Query	UPDATE user_game_profile_2471 SET  selected_cue = 36988, balls_potted = 302, total_winnings = 12000, current_win_streak = 0, seconds_played = 10368, games_lost = 17, games_won = 17, games_played = 34, user_id = 4528919084, level_progression = IF(level_progression > 1751, level_progression, 1751), last_update_timestamp = NOW() WHERE user_game_profile_id = 2986192571
+		173195040 Query	UPDATE user_game_profile_2471 SET  balls_potted = 669, seconds_played = 20342, games_lost = 52, games_played = 88, user_id = 4940492650, level_progression = IF(level_progression > 1004, level_progression, 1004), last_update_timestamp = NOW() WHERE user_game_profile_id = 3414588932
+		173194641 Query	UPDATE user_game_profile_2471 SET  user_id = 4949497910, level_progression = IF(level_progression > 756, level_progression, 756), last_update_timestamp = NOW() WHERE user_game_profile_id = 3423593648
+		173195630 Query	INSERT INTO chameleon.scratchcard_transaction VALUES ('628bab232f7bdfc641f96aecdaff9b911c4d451d2b56287d80588b8e65e7f409', 1235665479, 81, '2025-10-27 14:51:44')
+		173196444 Change user	mobile_ssl@10.28.27.55 on  using SSL/TLS
+		173196444 Change user	mobile_ssl@10.28.27.55 on chameleon using SSL/TLS
+		173196444 Query	UPDATE user_game_profile_2471 SET  vip_level_progression = 733, balls_potted = 3386, total_winnings = 2049300, current_win_streak = 0, seconds_played = 116976, games_lost = 239, games_won = 259, games_played = 498, user_id = 4357630987, level_progression = IF(level_progression > 5719, level_progression, 5719), last_update_timestamp = NOW() WHERE user_game_profile_id = 2838373572
+		173196713 Query	UPDATE user_game_profile_2471 SET  selected_cue = 16087, user_id = 4950005215, last_update_timestamp = NOW() WHERE user_game_profile_id = 3424100916
+		173194695 Change user	mobile_ssl@10.28.30.82 on  using SSL/TLS
+		173195582 Change user	mobile_ssl@10.28.28.113 on chameleon using SSL/TLS
+		173194695 Change user	mobile_ssl@10.28.30.82 on chameleon using SSL/TLS
+		173195582 Query	UPDATE user_game_profile_2471 SET  daily_bonus_timestamp = FROM_UNIXTIME(1761663180), last_update_timestamp = NOW() WHERE user_game_profile_id = 2635693194
+		173194695 Query	UPDATE user_game_profile_2471 SET  vip_migrated = 1, selected_cue = 16087, user_id = 4950005152, last_update_timestamp = NOW() WHERE user_game_profile_id = 3424100853
+		173196210 Change user	mobile_ssl@10.28.27.49 on  using SSL/TLS
+		173195270 Change user	mobile_ssl@10.28.29.49 on  using SSL/TLS

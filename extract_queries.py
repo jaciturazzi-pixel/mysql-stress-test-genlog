@@ -1,12 +1,12 @@
-#!python
+#!/usr/bin/env python3
 #-*- coding: utf-8 -*-
 
 """
 Extrator de Queries SQL do MySQL/MariaDB General Log
-Suporta MySQL 5.7+, MySQL 8.0+ e MariaDB 10.11+
+Suporta MySQL 5.7+, MySQL 8.0+, MariaDB 10.11+ e formato simples
 
 Autor: Jaci Turazzi
-Versão: 2.0 - Suporte para MariaDB 10.11
+Versão: 3.0 - Suporte universal para diferentes formatos
 """
 
 import argparse
@@ -43,10 +43,10 @@ def print_colored(text, color=None):
 
 def detect_log_format(log_file):
     """
-    Detecta automaticamente o formato do log (MySQL ou MariaDB)
+    Detecta automaticamente o formato do log (MySQL, MariaDB ou Simples)
     
     Returns:
-        str: 'mysql' ou 'mariadb'
+        str: 'mysql', 'mariadb' ou 'simple'
     """
     with open(log_file, 'r', encoding='utf-8', errors='ignore') as f:
         for i, line in enumerate(f):
@@ -54,6 +54,10 @@ def detect_log_format(log_file):
                 break
             
             line = line.strip()
+            
+            # Formato Simples: ID ESPAÇO Query [TAB/ESPAÇOS] SQL
+            if re.match(r'^\s*\d+\s+Query\s', line):
+                return 'simple'
             
             # Formato MariaDB 10.11: YYMMDD HH:MM:SS
             if re.match(r'^\d{6}\s+\d{2}:\d{2}:\d{2}\s+\d+\s+Query', line):
@@ -75,12 +79,18 @@ def get_patterns_for_format(log_format):
     Retorna os padrões regex apropriados para o formato do log
     
     Args:
-        log_format (str): 'mysql' ou 'mariadb'
+        log_format (str): 'mysql', 'mariadb' ou 'simple'
         
     Returns:
         tuple: (query_pattern, connect_pattern, skip_header_lines)
     """
-    if log_format == 'mariadb':
+    if log_format == 'simple':
+        # Formato simples: ID ESPAÇO Query [TAB/ESPAÇOS] SQL
+        query_pattern = re.compile(r'^\s*(\d+)\s+Query[\s\t]+(.+)$')
+        connect_pattern = re.compile(r'^\s*(\d+)\s+(Connect|Quit|Change\s+user)[\s\t]', re.IGNORECASE)
+        skip_lines = 0  # Não pula nenhuma linha
+        
+    elif log_format == 'mariadb':
         # MariaDB 10.11 formato: 251027 16:37:19     3 Query    INSERT...
         query_pattern = re.compile(r'^(\d{6}\s+\d{2}:\d{2}:\d{2})\s+(\d+)\s+Query\s+(.+)$')
         connect_pattern = re.compile(r'^(\d{6}\s+\d{2}:\d{2}:\d{2})\s+(\d+)\s+(Connect|Quit)', re.IGNORECASE)
@@ -250,8 +260,14 @@ def extract_queries(log_file, output_file, max_queries=None, query_type=None):
                         else:
                             query_stats['ignored'] += 1
                     
-                    # Inicia nova query
-                    timestamp, connection_id, query_text = match.groups()
+                    # Inicia nova query - CORREÇÃO PRINCIPAL AQUI
+                    if log_format == 'simple':
+                        # Para formato simples: (connection_id, query_text)
+                        connection_id, query_text = match.groups()
+                    else:
+                        # Para outros formatos: (timestamp, connection_id, query_text)
+                        timestamp, connection_id, query_text = match.groups()
+                    
                     if not should_ignore_query(query_text, ignore_compiled):
                         current_query = query_text
                         in_query = True
@@ -261,12 +277,13 @@ def extract_queries(log_file, output_file, max_queries=None, query_type=None):
                         in_query = False
                         
                 elif in_query:
-                    # Linha de continuação da query
-                    # Para MariaDB: linhas sem timestamp são continuações
-                    # Para MySQL: também verifica se não é uma nova linha com timestamp
+                    # Linha de continuação da query - CORREÇÃO AQUI TAMBÉM
                     is_continuation = True
                     
-                    if log_format == 'mariadb':
+                    if log_format == 'simple':
+                        # No formato simples, se não tem ID + comando, é continuação
+                        is_continuation = not re.match(r'^\s*\d+\s+(Query|Connect|Quit|Change)', line)
+                    elif log_format == 'mariadb':
                         # No MariaDB, se não começa com timestamp, é continuação
                         is_continuation = not re.match(r'^\d{6}\s+\d{2}:\d{2}:\d{2}', line)
                     else:
@@ -343,13 +360,20 @@ def extract_queries(log_file, output_file, max_queries=None, query_type=None):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Extrai queries SQL do general log do MySQL/MariaDB',
+        description='Extrator universal de queries SQL de logs MySQL/MariaDB',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Exemplos de uso:
+  python extract_queries.py general.log.test -o queries.sql
   python extract_queries.py /var/log/mysql/general.log -o queries.sql
   python extract_queries.py mysql.log -o select_queries.sql -t read -m 1000
   python extract_queries.py mariadb.log -o insert_queries.sql -t write
+  
+Formatos suportados automaticamente:
+  - Formato simples: ID Query SQL (com TABs ou espaços)
+  - MariaDB: YYMMDD HH:MM:SS ID Query SQL
+  - MySQL 8.0+: YYYY-MM-DDTHH:MM:SS.ffffffZ ID Query SQL
+  - MySQL 5.7: YYYY-MM-DD HH:MM:SS ID Query SQL
         """
     )
     
