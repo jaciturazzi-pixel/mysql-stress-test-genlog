@@ -1,4 +1,5 @@
 #!python
+#-*- coding: utf-8 -*-
 """
 MySQL Stress Test - Teste de stress multi-threaded usando queries extraídas de logs
 
